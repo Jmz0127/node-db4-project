@@ -10,7 +10,7 @@ exports.up = async function (knex) {
 			table.string('ingredient_unit', 50);
 		})
 		.createTable('steps', (table) => {
-            table.increments('steps');
+            table.increments('step_id');
 			table.string('step_text', 200).notNullable()
 			table.integer('step_number').notNullable()
             table.integer('recipe_id')
